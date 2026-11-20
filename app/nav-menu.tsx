@@ -36,7 +36,7 @@ export default function NavMenu({
           <li key={item.id}>
             <a
               href={item.connectedNode ? "/page" + item.path : item.path}
-              className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+              className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand"
               aria-label={item.label}
             >
               <span>{item.label}</span>
