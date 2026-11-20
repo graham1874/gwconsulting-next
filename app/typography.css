@@ -1,0 +1,6 @@
+.wp-block-list {
+    list-style-type: disc;
+    li {
+        margin-left: 1.5rem;
+    }
+}
