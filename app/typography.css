@@ -4,3 +4,29 @@
         margin-left: 1.5rem;
     }
 }
+.wp-block-quote {
+    border-left: 2px solid ;
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-top: calc(var(--spacing) * 3);
+    padding-right: calc(var(--spacing) * 5);
+    padding-bottom: calc(var(--spacing) * 3);
+    padding-left: calc(var(--spacing) * 8);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+    &.text-xl {
+        font-size: var(--text-xl);
+    }
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
+}
