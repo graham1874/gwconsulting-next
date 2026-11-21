@@ -29,7 +29,7 @@ export default async function Blog() {
     <main className="mx-auto max-w-2xl px-4 py-12">
       <div className="flex mb-4">
         {data.posts.nodes.map((post: any) => (
-          <article className="w-1/3 p-2" key={post.slug}>
+          <article className="md:w-1/3 p-2" key={post.slug}>
             <Link className="space-x-2" href={`/blog/${post.slug}`}>
             
                 {post.featuredImage ? (

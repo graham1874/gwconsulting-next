@@ -79,7 +79,7 @@ export default async function BlogPost({
 
       <h1 className="mt-6 text-4xl font-bold">{post.title}</h1>
 
-      <p className="mt-2 text-sm text-gray-500">
+      <p className="mt-2 text-sm text-gray-300">
         {date}
         {post.author && ` · ${post.author.node.name}`}
       </p>
