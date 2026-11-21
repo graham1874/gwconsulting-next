@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "i0.wp.com",
         pathname: "/gwconsulting.blog/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "i0.wp.com",
+        pathname: "/wp.gwconsulting.blog/wp-content/uploads/**",
+      },
     ],
   },
   experimental: {
