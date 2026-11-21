@@ -20,6 +20,7 @@ export default function Contact() {
             <p className="wp-block-paragraph">
                 Looking forward to hearing from you.
             </p>
+            <hr className="wp-block-separator has-alpha-channel-opacity"></hr>
         </article>
         <ContactForm />
     </main>
