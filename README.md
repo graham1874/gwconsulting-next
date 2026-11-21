@@ -42,11 +42,15 @@ I added some API keys in a .env.local file. I've not added it to git because sec
 Then when you get it to vercel add them as environment variables 
 
 WORDPRESS_API_URL=https://yourwordpresssite/graphql
+
 RESEND_API_KEY=resendAPIKey
+
 CONTACT_TO_EMAIL=email@address.com
 
 ## Things You'll need to set up:
 
 WPGraphQL - https://www.wpgraphql.com/
+
 Resend - https://resend.com/ (set up a API key)
+
 WordPress
