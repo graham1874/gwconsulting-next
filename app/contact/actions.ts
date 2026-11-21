@@ -20,8 +20,9 @@ export async function sendMessage(
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
+  const subject = String(formData.get("subject") ?? "").trim();
 
-  if (!name || !email || !message) {
+  if (!name || !email || !message || !subject) {
     return { status: "error", message: "Please fill in every field." };
   }
   if (!/^\S+@\S+\.\S+$/.test(email)) {
@@ -36,8 +37,8 @@ export async function sendMessage(
     from: "Website Contact <onboarding@resend.dev>",
     to: process.env.CONTACT_TO_EMAIL!,
     replyTo: email,
-    subject: `New message from ${name}`,
-    text: `From: ${name} <${email}>\n\n${message}`,
+    subject: `New message from ${name} - ${subject}`,
+    text: `From: ${name} <${email}>\n\nSubject: ${subject}\n\n${message}`,
   });
 
   if (error) {
