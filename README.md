@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Environment variables!
+
+I added some API keys in a .env.local file. I've not added it to git because secrets... shhhhhh
+
+Then when you get it to vercel add them as environment variables 
+
+WORDPRESS_API_URL=https://yourwordpresssite/graphql
+
+RESEND_API_KEY=resendAPIKey
+
+CONTACT_TO_EMAIL=email@address.com
+
+## Things You'll need to set up:
+
+WPGraphQL - https://www.wpgraphql.com/
+
+Resend - https://resend.com/ (set up a API key)
+
+WordPress
