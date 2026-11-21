@@ -20,35 +20,19 @@ export default function NavMenu({
 }) {
   const [open, setOpen] = useState(false);
   const menuId = `menu-${location.toLowerCase()}`;
+  const hiddenMob = location === "FOOTER" ? "" : "hidden";
 
   return (
     <nav
       id={"nav-" + menuId}
-      className={`mx-auto w-full max-w-3xl bg-neutral-primary w-full z-20 top-0 start-0 border-b border-default ${
+      className={`mx-auto w-full max-w-3xl bg-neutral-primary w-full z-20 top-0 start-0 ${
         open ? "nav-open" : "nav-closed"
       }`}
     >
-      <ul
-        id={menuId}
-        className={`${open ? "flex" : "hidden"} gap-6 text-sm md:flex`}
-      >
-        {items.map((item) => (
-          <li key={item.id}>
-            <a
-              href={item.connectedNode ? "/page" + item.path : item.path}
-              className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand"
-              aria-label={item.label}
-            >
-              <span>{item.label}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-
       {location === "PRIMARY" && (
         <button
           type="button"
-          className="rounded p-2 text-gray-700 hover:bg-gray-100 md:hidden"
+          className="rounded p-2 text-gray-700 hover:bg-gray-700 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           aria-controls={menuId}
@@ -57,7 +41,7 @@ export default function NavMenu({
           <svg
             className="h-6 w-6"
             fill="none"
-            stroke="currentColor"
+            stroke="white"
             strokeWidth={2}
             viewBox="0 0 24 24"
           >
@@ -69,6 +53,24 @@ export default function NavMenu({
           </svg>
         </button>
       )}
+      <ul
+        id={menuId}
+        className={`${open ? "" : hiddenMob} gap-6 text-sm md:flex`}
+      >
+        {items.map((item) => (
+          <li key={item.id}>
+            <a
+              href={item.connectedNode ? "/page" + item.path : item.path}
+              className="block py-2 px-3 text-white bg-brand rounded hover:bg-gray-700 md:bg-transparent md:text-fg-brand"
+              aria-label={item.label}
+              target={item.path.startsWith("http") ? "_blank" : "_self"}
+            >
+              <span>{item.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
     </nav>
   );
 }

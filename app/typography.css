@@ -6,9 +6,9 @@
 }
 .wp-block-quote {
     border-left: 2px solid ;
-    padding-left: 1rem;
     margin-left: 0;
     margin-right: 0;
+    font-style: --font-alternative;
 
     padding-top: calc(var(--spacing) * 3);
     padding-right: calc(var(--spacing) * 5);

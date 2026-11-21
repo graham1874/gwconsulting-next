@@ -8,3 +8,39 @@
         border-radius: 1.5rem;
     }
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    a{
+        &:hover {
+            text-decoration: none;
+        }
+        &[aria-label="Git"], &[aria-label="LinkedIn"] {
+            width: 2rem;
+            height: 2rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            span {
+                display: none;
+            }
+        }
+        &[aria-label="LinkedIn"] {
+            background-image: url("/images/linkedin.svg");
+        }
+        &[aria-label="Git"] {
+            background-image: url("/images/git.svg");
+            width: 28px;
+            height: 28px;
+        }
+        @media screen and (max-width: 768px) {
+            &[aria-label="Git"], &[aria-label="LinkedIn"] {
+                margin-inline: calc(var(--spacing) * 3);
+            }
+        }
+    }
+}
