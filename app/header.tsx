@@ -3,8 +3,8 @@ import Nav from "./nav";
 
 export default function Header() {
   return (
-    <div className="w-full bg-zinc-50 font-sans dark:bg-black">
-      <header className="mx-auto w-full max-w-3xl bg-white dark:bg-black">
+    <div className="w-full font-sans bg-black">
+      <header className="mx-auto w-full max-w-3xl bg-black">
         <Image
           className="block h-auto w-full"
           src="/header.png"

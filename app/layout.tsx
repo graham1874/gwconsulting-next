@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${nunitoSans.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="flex min-h-screen flex-col">
+      <body className="flex min-h-screen flex-col bg-black text-white">
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
